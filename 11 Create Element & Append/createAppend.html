@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create List Items</title>
+  <script>
+    function createListItems() {
+      var ul = document.getElementById("my-list");
+      for (var i = 1; i <= 5; i++) {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(i));
+        ul.appendChild(li);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Create List Items</h1>
+  <button onclick="createListItems()">Create List</button>
+  <ul id="my-list"></ul>
+</body>
+</html>

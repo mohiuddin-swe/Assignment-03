@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User's Browser Info</title>
+  <script>
+    // Function to detect the user's browser name and version
+    function detectBrowserInfo() {
+      const browserName = navigator.appName;
+      const browserVersion = navigator.appVersion;
+      return { browserName, browserVersion };
+    }
+
+    function displayBrowserInfo() {
+      const { browserName, browserVersion } = detectBrowserInfo();
+      const infoElement = document.getElementById('browser-info');
+      infoElement.innerHTML = `Browser Name: ${browserName}<br>Browser Version: ${browserVersion}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>User's Browser Info</h1>
+  <button onclick="displayBrowserInfo()">Detect Browser Info</button>
+  <div id="browser-info"></div>
+</body>
+</html>

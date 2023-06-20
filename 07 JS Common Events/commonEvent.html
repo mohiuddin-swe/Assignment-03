@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Page</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Click event listener
+      document.addEventListener('click', function(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert(`Clicked at (${x}, ${y})`);
+      });
+
+      // Keydown event listener
+      document.addEventListener('keydown', function(event) {
+        const keyCode = event.keyCode;
+        alert(`Key pressed: ${keyCode}`);
+      });
+
+      // Mouseover event listener
+      const imageElement = document.getElementById('image');
+      imageElement.addEventListener('mouseover', function() {
+        imageElement.src = 'new.jpg';
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Interactive Page</h1>
+  <p>Click anywhere on the page to display coordinates.</p>
+  <p>Press any key on the keyboard to display the key code.</p>
+  <img id="image" src="mohi.jpg" alt="Initial Image"> 
+</body>
+</html>

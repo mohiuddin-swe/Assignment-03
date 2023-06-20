@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User's Location</title>
+  <script>
+    function getUserLocation() {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const { latitude, longitude } = position.coords;
+          const infoElement = document.getElementById('location-info');
+          infoElement.innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}`;
+        },
+        error => {
+          alert(`Error: ${error.message}`);
+        }
+      );
+    }
+  </script>
+</head>
+<body>
+  <h1>User's Location</h1>
+  <button onclick="getUserLocation()">Get Location</button>
+  <div id="location-info"></div>
+</body>
+</html>

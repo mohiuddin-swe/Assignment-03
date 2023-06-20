@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open New Window</title>
+  <script>
+    function openNewWindow(url, width, height) {
+      window.open(url, '_blank', `width=${width}, height=${height}`);
+    }
+
+    function openExampleWindow() {
+      const url = 'https://www.example.com';
+      const width = 800;
+      const height = 600;
+      openNewWindow(url, width, height);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="openExampleWindow()">Open New Window</button>
+</body>
+</html>
